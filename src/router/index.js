@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Fenglei from '../views/Fenglei.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,16 @@ const routes = [
     name: 'home',
     component: Home
   },
+  {
+    path: '/fenglei',
+    name: 'fenglei',
+    component: Fenglei
+  },
+  // {
+  //   path: '/more',
+  //   name: 'more',
+  //   component: More
+  // },
   {
     path: '/about',
     name: 'about',

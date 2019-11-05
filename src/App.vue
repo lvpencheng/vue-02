@@ -1,12 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <!-- <div id="nav"> -->
+    <!--  <router-link to="/"></router-link> |
+      <router-link to="/about"></router-link>
+    <!-- </div> -->
     <router-view/>
+	<van-tabbar v-model="active">
+	  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+	  <van-tabbar-item  icon="description" to="/fenglei">分类</van-tabbar-item>
+	  <van-tabbar-item icon="shopping-cart-o">购物车</van-tabbar-item>
+	  <van-tabbar-item icon="manager-o">我的</van-tabbar-item>
+	</van-tabbar>
+
   </div>
 </template>
+
+<script>
+	export default {
+	  data() {
+	    return {
+	      active: 0
+	    }
+	  }
+	}
+</script>
 
 <style lang="less">
 #app {
